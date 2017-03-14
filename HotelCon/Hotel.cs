@@ -1,4 +1,4 @@
-namespace HotelCon
+﻿namespace HotelCon
 {
     using System;
     using System.Collections.Generic;
@@ -29,5 +29,11 @@ namespace HotelCon
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Room { get; set; }
+
+
+        public override string ToString()
+        {
+            return string.Format("Hotel_No: {0}, Name: {1}, Address: {2}", Hotel_No, Name, Address);
+        }
     }
 }
